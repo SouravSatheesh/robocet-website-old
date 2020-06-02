@@ -1,0 +1,872 @@
+/*-------------------------------------------------------------
+======================  General  ==============================
+---------------------------------------------------------------*/
+html, body {
+	font-family: "Open Sans", sans-serif;
+	color: #000a0a;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+	background: rgba(111, 186, 216, 0.712);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 183, 255); 
+	border-radius: 20px;      
+}
+
+/*-------------------------------------------------------------
+======================= Back to Top ========================
+---------------------------------------------------------------*/
+.back-to-top {
+	position: fixed;
+	display: none;
+	right: 15px;
+	bottom: 15px;
+	z-index: 9000;
+}
+  
+.back-to-top i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	background: #3187d8;
+	color: #fff;
+	transition: all 0.4s;
+	border-radius: 50%;
+}
+  
+.back-to-top i:hover {
+	background: #0c5692;
+	color: #fff;
+}
+  
+/*-------------------------------------------------------------
+=========================  Preloader  ===========================
+---------------------------------------------------------------*/
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	overflow: hidden;
+	background: #fff;
+	height: 100%;
+	width: 100%;
+}
+
+#preloader span {
+	position: fixed;
+	top: calc(50% - 20px);
+	left: calc(50% - 40px);
+	z-index: 10000;
+	font-size: 20px;
+	color: #060547;
+}
+
+#preloader img {
+	position: fixed;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+}
+  
+/*-------------------------------------------------------------
+========= Disable AOS animation on moblie devices ============
+---------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+	[data-aos-delay] {
+	  transition-delay: 0 !important;
+	}
+}
+  
+/*-------------------------------------------------------------
+======================  Top Bar  ==============================
+---------------------------------------------------------------*/
+#topbar {
+	height: 30px;
+	font-size: 14px;
+	background-color: #266188;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 6px;
+}
+
+#topbar.topbar-scrolled {
+	top: -30px;
+}
+
+#topbar .contact-info a {
+	line-height: 1;
+	color: rgba(255, 255, 255, 0.5);
+	transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1.1em;
+}
+
+#topbar .contact-info i{
+	color: #16b311;
+}
+
+#topbar .social-links a{
+	line-height: 1;
+	color: rgba(255, 255, 255, 0.5);
+	transition: 0.3s;
+	font-size: 1.1em;
+	padding-left: 15px;
+}
+
+#topbar .social-links a:hover {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1.2em;
+}
+
+/*-------------------------------------------------------------
+=======================  Header  ==============================
+---------------------------------------------------------------*/
+#header {
+	transition: all 0.5s;
+	background-color: #2d8eb4d0;
+	z-index: 1000;
+	top: 30px;
+}
+
+#header.header-scrolled {
+	top: 0;
+	background-color: #176464;
+}
+
+#header .logo {
+	font-family: "Georgia", serif;
+	font-size: 35px;
+	margin: 0;
+	line-height: 1;
+}
+
+#header .logo a {
+	color: whitesmoke;
+}
+
+#header .logo div {
+	padding-top: 2px;
+	font-size: 12px;
+}
+
+@media (max-width: 767px) {
+	#header {
+	  top: 0;
+	  padding: 15px 20px 15px 20px;
+	}
+	#header .logo a{
+	  font-size: 35px;
+	}
+	#header .logo div {
+		font-size: 14px;
+	}
+}
+  
+
+/*-------------------------------------------------------------
+=====================  Navigation Menu  =======================
+---------------------------------------------------------------*/
+
+/* Desktop Navigation */
+.nav-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.nav-menu li a {
+	/* position: relative; */
+	/* white-space: nowrap; */
+	padding: 23px 8px 22px 8px;
+}
+
+.nav-menu a {
+	display: block;
+	/* position: relative; */
+	color: white;
+	transition: 0.3s;
+}
+
+.nav-menu li:hover , .nav-menu .active {
+	background-color: rgb(57, 168, 150);
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.nav-menu li a {
+		font-size: 20px;
+		padding-left: 12px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav-menu li a {
+		font-size: 18px;
+	}
+}
+
+
+/* Mobile Navigation */
+
+.mobile-nav-toggle {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	z-index: 9998;
+	border: 0;
+	background: none;
+	font-size: 30px;
+	transition: all 0.4s;
+	outline: none !important;
+	line-height: 1;
+	cursor: pointer;
+	text-align: right;
+}
+  
+.mobile-nav-toggle i {
+	color: rgb(244, 245, 247);
+}
+  
+.mobile-nav {
+	position: fixed;
+	top: 55px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	z-index: 9999;
+	overflow-y: auto;
+	background: #fff;
+	transition: ease-in-out 0.2s;
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 10px;
+	padding: 10px 0;
+}
+  
+.mobile-nav * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+  
+.mobile-nav a {
+	display: block;
+	position: relative;
+	color: #191919;
+	padding: 10px 20px;
+	font-weight: 500;
+	outline: none;
+}
+  
+.mobile-nav a:hover, .mobile-nav .active > a {
+	color: #e82d2d;
+	text-decoration: none;
+}
+  
+.mobile-nav-active {
+	overflow: hidden;
+}
+  
+.mobile-nav-active .mobile-nav {
+	opacity: 1;
+	visibility: visible;
+}
+  
+.mobile-nav-active .mobile-nav-toggle i {
+	color: #fff;
+}
+  
+
+
+/*-------------------------------------------------------------
+======================  Introduction  ===========================
+---------------------------------------------------------------*/
+#intro {
+	width: 100%;
+	height: 100vh;
+	background: url('../images/RobAi.jpeg') center top;
+	position: relative;
+	text-align: center;
+}
+
+#intro h1 {
+	font-size: 48px;
+	color: #163435;
+}
+
+#intro h2 {
+	color: #3c5e5f;
+	margin-bottom: 30px;
+	font-size: 25px;
+}
+
+#intro .btn-get-started {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	display: inline-block;
+	padding: 10px 28px;
+	transition: 0.5s;
+	border: 3px solid rgba(10, 3, 3, 0.404);
+	color: #3c5e5f;
+	border-radius: 25px;
+	font-weight: bold;
+  }
+  
+#intro .btn-get-started:hover {
+	background: rgba(22, 94, 114, 0.418);
+	border-color: rgba(36, 126, 151, 0.418);
+	color: #fff;
+	font-weight: bolder;
+}
+  
+@media (min-width: 1024px) {
+	#intro {
+	  background-attachment: fixed;
+	}
+}
+  
+@media (max-width: 768px) {
+	#intro {
+	  text-align: center;
+	}
+	#intro .container {
+	  padding-top: 40px;
+	}
+	#intro h1 {
+	  font-size: 40px;
+	  line-height: 36px;
+	}
+	#intro h2 {
+	  font-size: 20px;
+	  line-height: 24px;
+	  margin-bottom: 30px;
+	}
+}
+  
+  
+/*--------------------------------------------------------------
+======================  Sections General  ======================
+---------------------------------------------------------------*/
+
+section {
+	padding: 40px;
+	background: linear-gradient(0deg, #98ddc8 0%, #7ca1c4 100%);
+}
+
+section .section-header h3 {
+	font-size: 40px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+section .section-header h3::before, section .section-header h3::after {
+	content: "";
+	height: 3px;
+	width: 70px;
+	background-color: #3039b9c5;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+@media (min-width: 401px) and (max-width: 576px) {
+	section .section-header h3 {
+		font-size: 27px;
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	section .section-header h3::before, section .section-header h3::after {
+		height: 2px;
+		width: 50px;
+	}
+}
+
+@media (max-width: 400px) {
+	section .section-header h3 {
+		font-size: 20px;
+		padding-bottom: 10px;
+	}
+	section .section-header h3::before, section .section-header h3::after {
+		height: 1px;
+		width: 20px;
+	}
+}
+
+  
+/*--------------------------------------------------------------
+======================  About Us  ===========================
+---------------------------------------------------------------*/
+
+
+.about .section-header {
+	text-align: center;
+}
+
+  
+.about iframe {
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 992px) {
+	.about .row .video {
+		height: 250px;
+	}
+}
+
+/*--------------------------------------------------------------
+==========================  aim  ===========================
+---------------------------------------------------------------*/
+
+.aim ul {
+	list-style: none;
+	padding: 0;
+}
+
+.aim ul li {
+	padding-bottom: 20px;
+}
+
+.aim ul i {
+	color: #e2e61d;
+	float: left;
+	clear: left;
+	margin: 10px 10px 20px 0px;
+}
+
+.aim ul span {
+	clear: both;
+}
+
+.aim img {
+	width: 100%;	
+	height: auto;
+	max-height: 300px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.aim ul li {
+		padding-bottom: 20px;
+	}
+	
+	.aim ul i {
+		margin-top: 0px;
+	}
+}
+
+/*-------------------------------------------------------------
+=======================  Events  ========================
+---------------------------------------------------------------*/
+
+#events .event-tile {
+	margin: auto;
+}
+
+#events .event-tile img {
+	height: 100%;
+	width: 100%;
+}
+
+#events .event-tile .tile span {
+	position: absolute;
+	width: 100%;
+	font-size: 20px;
+	padding-left: 5px;
+}
+
+#events .event-tile i {
+	font-size: 25px;
+	background-color: rgb(255, 0, 0);
+	text-align: center;
+	padding: 5px;
+	border-radius: 50%;
+	color: rgb(252, 249, 249);
+	position: relative;
+	left: 40px;
+	bottom: 15px;
+}
+
+#events .event-tile .event-overlay {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: #000a0ab2;
+	z-index: 9900;
+	display: none;
+}
+
+#events .event-description {
+	position: fixed;
+	background-color: rgb(190, 178, 178);
+	top: 15vh;
+	left: 15vw;
+	height: 70vh;
+	width: 70vw;
+	z-index: 9999;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 50px;
+	border-radius: 30px;
+	padding-top: 30px;
+}
+
+.event-description h3 {
+	text-align: center;
+	position: relative;
+	left: 10px;
+	font-weight: bold;
+}
+
+.event-description p {
+	padding-top: 30px;	
+}
+
+#event-gallery {
+	width: 50vw;
+	margin: auto;
+	padding-top: 15px;
+}
+
+#event-gallery img {
+	border-radius: 30px;
+}
+
+#event-gallery .icofont-rounded-left , #event-gallery .icofont-rounded-right {
+	color: #000a0a;
+}
+
+.event-description::-webkit-scrollbar {
+	display: none;
+}
+
+@media (max-width: 575px) {
+	#event-gallery {
+		width: 45vw;
+		padding-top: 5px;
+	}
+	#event-gallery img {
+		border-radius: 20px;
+	}	
+	#events .event-description {
+		padding: 25px;
+		padding-top: 20px;
+	}
+	#events .event-tile i {
+		left: 15px;
+		bottom: 10px;
+		font-size: 20px;
+	}
+	.event-description h3 {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 992px) {
+	.event-description h3 {
+		font-size: 36px;
+	}
+	.event-description p {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	#event-gallery {
+		width: 45vw;
+		padding-top: 5px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#event-gallery {
+		width: 35vw;
+	}
+	#events .event-description {
+		top: 15vh;
+		left: 20vw;
+		width: 60vw;
+	}	
+}
+
+@media (max-width: 992px) {
+	#events .event-tile .tile span {
+		font-size: 13px;
+	}
+}
+
+
+
+
+/*-------------------------------------------------------------
+=======================  Announcements  ========================
+---------------------------------------------------------------*/
+
+#announcement {
+	background: linear-gradient(rgba(11, 32, 26, 0.5), rgba(16, 26, 56, 0.5)), url("../images/announcement.jpg") fixed center center;
+	background-size: cover;
+}
+
+#announcement h3 {
+	color: white;
+	font-size: 30px;
+}
+
+#announcement p {
+	color: rgb(238, 223, 14);
+}
+
+#announcement .announce-btn {
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	display: inline-block;
+	padding: 10px 28px;
+	transition: 0.5s;
+	margin-top: 10px;
+	border: 2px solid #0b284d;
+	color: rgb(205, 228, 5);
+	border-radius: 30px;
+	background-color: #0b284da8;
+	clear: both;
+}
+
+#announcement .announce-btn:hover {
+	background-color: #0c356b;
+	border: 2px solid #0c356b;
+}
+
+/*-------------------------------------------------------------
+==========================  Team  ===========================
+---------------------------------------------------------------*/
+
+#team .team-member .team-image img{
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;	
+}
+
+#team .team-member {
+	/* border: 1px solid #0c5692; */
+	text-align: center;
+	padding: 10px;
+}
+
+#team .team-member .team-name {
+	position: relative;
+	top: 8px;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+#team .team-member .team-position {
+	position: relative;
+	font-size: 16px;
+	top: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 16px;
+}
+
+#team .team-member .team-department {
+	position: relative;
+	font-size: 13px;
+	padding: 0px;
+	margin: 0px;
+	top: 10px;
+}
+
+@media (max-width: 767px) {
+	#team .team-member .team-image img{
+		width: 100px;
+		height: 100px;
+	}
+	#team .team-member .team-position {
+		font-size: 13px;
+		line-height: 13px;
+		display: block;
+		margin-top: 3px;
+	}
+	#team .team-member .team-name {
+		display: block;
+		font-size: 16px;
+		line-height: 17px;
+		position: relative;
+		top: -9px;
+	}
+	#team .team-member .team-department {
+		display: block;
+		font-size: 12px;
+		line-height: 13px;
+		position: relative;
+		top: -25px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#team .team-member .team-image img{
+		width: 150px;
+		height: 150px;
+	}
+}
+
+/*-------------------------------------------------------------
+=========================  Contact  ===========================
+---------------------------------------------------------------*/
+
+.contact .info-box {
+	text-align: center;
+	box-shadow: 0 0 30px #266188;
+	padding: 30px 0 30px 0;
+}
+
+.contact .info-box i {
+	font-size: 32px;
+	color: #21149c;
+	border-radius: 50%;
+	padding: 8px;
+	border: 2px dotted #042ea0;
+}
+
+.contact .info-box h3 {
+	font-size: 24px;
+	color: #0b052c;
+}
+
+.contact .info-box p , .contact .info-box a {
+	padding: 0;
+	line-height: 24px;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.contact .question {
+	box-shadow: 0 0 30px #266188;
+	padding: 30px;
+	padding-bottom: 10px;
+}
+
+.contact .question .title {
+	padding-bottom: 8px;
+}
+
+.contact .question .main {
+	font-size: 27px;
+}
+
+.contact .question .sub {
+	font-size: 15px;
+	padding-left: 5px;
+}
+
+.contact .contact-form .validate {
+	display: none;
+	color: red;
+	font-size: 13px;
+	padding: 2px 0 0 0;
+}
+  
+.contact .contact-form .sent-message {
+	display: none;
+	color: #fff;
+	background: #18d26e;
+	text-align: center;
+	padding: 5px;
+	font-weight: 600;
+}
+
+.contact .contact-form input, .contact .contact-form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+}
+  
+.contact .contact-form input::focus, .contact .contact-form textarea::focus {
+	background-color: #cc1616;
+}
+  
+.contact .contact-form input {
+	padding: 20px 15px;
+}
+  
+.contact .contact-form textarea {
+	padding: 12px 15px;
+}
+
+#name, #email, #subject, #message {
+	border-radius: 15px;
+}
+  
+.contact .contact-form button[type="submit"] {
+	background: #0c2699b0;
+	border: 0;
+	padding: 10px 24px;
+	color: #fff;
+	transition: 0.4s;
+	border-radius: 20px;
+}
+  
+.contact .contact-form button[type="subit"]:hover {
+	background: #e82d2d;
+}  
+
+/*-------------------------------------------------------------
+=========================  Footer  ===========================
+---------------------------------------------------------------*/
+#footer {
+	background: #28928d;
+	padding: 10px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+#footer .credits {
+	font-size: 12px;
+}
+
+#footer .social-icons i {
+	font-size: 30px;
+	padding-top: 7px;
+	padding-left: 5px;
+	color: #ffffff;
+}
+
+#footer .social-icons i:hover {
+	color: #b3b5bb;
+}
+
+@media (max-width: 767px) {
+	#footer .social-icons {
+		border-top: 1px solid rgba(11, 94, 109, 0.616);
+		margin: auto;
+		margin-top: 15px;
+		padding-top: 5px;
+		width: 60%;
+	}
+}
