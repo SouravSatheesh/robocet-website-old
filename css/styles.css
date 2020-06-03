@@ -59,34 +59,89 @@ body::-webkit-scrollbar-thumb {
 /*-------------------------------------------------------------
 =========================  Preloader  ===========================
 ---------------------------------------------------------------*/
-#preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9999;
-	overflow: hidden;
-	background: #fff;
-	height: 100%;
-	width: 100%;
-}
-
-#preloader span {
-	position: fixed;
-	top: calc(50% - 20px);
-	left: calc(50% - 40px);
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 	z-index: 10000;
-	font-size: 20px;
-	color: #060547;
+	background-color: white;
 }
 
-#preloader img {
-	position: fixed;
-	top: calc(50% - 100px);
-	left: calc(50% - 100px);
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+	border-top-color: #3498db;
+	z-index: 10010;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
-  
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #30ce1b;
+
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+ 
 /*-------------------------------------------------------------
 ========= Disable AOS animation on moblie devices ============
 ---------------------------------------------------------------*/
@@ -314,7 +369,8 @@ body::-webkit-scrollbar-thumb {
 
 #intro h1 {
 	font-size: 48px;
-	color: #163435;
+	color: #031d42;
+	text-shadow: 0 0 2px black;
 }
 
 #intro h2 {
@@ -333,15 +389,15 @@ body::-webkit-scrollbar-thumb {
 	display: inline-block;
 	padding: 10px 28px;
 	transition: 0.5s;
-	border: 3px solid rgba(10, 3, 3, 0.404);
-	color: #3c5e5f;
+	border: 3px solid rgb(51, 3, 78);
+	color: #2a33ad;
+	background-color: #0d7e8d5b;
 	border-radius: 30px;
 	font-weight: bold;
   }
   
 #intro .btn-get-started:hover {
 	background: rgba(22, 94, 114, 0.418);
-	border-color: rgba(36, 126, 151, 0.418);
 	color: #fff;
 	font-weight: bolder;
 }
