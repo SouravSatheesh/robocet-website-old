@@ -8,6 +8,7 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
+	scrollbar-width: none;
 }
 
 a:hover {
@@ -254,7 +255,7 @@ body::-webkit-scrollbar-thumb {
 .nav-menu li a {
 	/* position: relative; */
 	/* white-space: nowrap; */
-	padding: 23px 8px 22px 8px;
+	padding: 25px 8px 25px 8px;
 }
 
 .nav-menu a {
@@ -374,11 +375,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 #intro h2 {
-	color: #163631;
+	color: #161817;
 	/* text-shadow: 0px 0px 5px rgb(0, 0, 0); */
 	font-weight: 500;
 	margin-bottom: 30px;
 	font-size: 25px;
+	padding-top: 5px;
 }
 
 #intro .btn-get-started {
@@ -485,6 +487,9 @@ section .section-header h3::before, section .section-header h3::after {
 	text-align: center;
 }
 
+.about .section-header p {
+	padding-bottom: 5px;
+}
   
 .about .onq-youtube-player {
 	width: 100%;
@@ -511,10 +516,10 @@ section .section-header h3::before, section .section-header h3::after {
 }
 
 .aim ul i {
-	color: #e2e61d;
+	color: #1d4ce6;
 	float: left;
 	clear: left;
-	margin: 10px 10px 20px 0px;
+	margin: 10px 20px 20px 0px;
 }
 
 .aim ul span {
@@ -567,6 +572,7 @@ section .section-header h3::before, section .section-header h3::after {
 	position: relative;
 	left: 40px;
 	bottom: 15px;
+	z-index: 10000;
 }
 
 #events .event-tile .event-overlay {
@@ -582,7 +588,7 @@ section .section-header h3::before, section .section-header h3::after {
 
 #events .event-description {
 	position: fixed;
-	background-color: rgb(190, 178, 178);
+	background-color: rgb(192, 203, 240);
 	top: 15vh;
 	left: 15vw;
 	height: 70vh;
@@ -593,6 +599,7 @@ section .section-header h3::before, section .section-header h3::after {
 	padding: 50px;
 	border-radius: 30px;
 	padding-top: 30px;
+	scrollbar-width: none;
 }
 
 .event-description h3 {
@@ -637,12 +644,18 @@ section .section-header h3::before, section .section-header h3::after {
 		padding-top: 20px;
 	}
 	#events .event-tile i {
-		left: 15px;
-		bottom: 10px;
+		margin-right: 30px;
+		margin-top: 10px;
 		font-size: 20px;
 	}
 	.event-description h3 {
 		font-size: 22px;
+	}
+	#events .section-header {
+		padding-bottom: 14px;
+	}
+	#event-gallery .icofont-rounded-left , #event-gallery .icofont-rounded-right {
+		font-size: 30px;
 	}
 }
 
@@ -687,17 +700,18 @@ section .section-header h3::before, section .section-header h3::after {
 ---------------------------------------------------------------*/
 
 #announcement {
-	background: linear-gradient(rgba(11, 32, 26, 0.5), rgba(16, 26, 56, 0.5)), url("../images/announcement.jpg") fixed center center;
+	background: linear-gradient(rgba(3, 34, 25, 0.815), rgba(7, 13, 34, 0.849)), url("../images/announcement.jpg") fixed center center;
 	background-size: cover;
 }
 
 #announcement h3 {
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 30px;
+	font-weight: 600;
 }
 
 #announcement p {
-	color: rgb(238, 223, 14);
+	color: rgb(255, 239, 11);
 }
 
 #announcement .announce-btn {
@@ -802,8 +816,14 @@ section .section-header h3::before, section .section-header h3::after {
 
 .contact .info-box {
 	text-align: center;
-	box-shadow: 0 0 20px #266188d3;
+	box-shadow: 0 0 10px #26618871;
 	padding: 30px 0 30px 0;
+}
+
+.contact .map iframe {
+	box-shadow: 0 0 10px #26618871;
+	padding: 0px;
+	margin-bottom: 20px;
 }
 
 .contact .info-box i {
@@ -826,9 +846,9 @@ section .section-header h3::before, section .section-header h3::after {
 	margin-bottom: 0;
 }
 
-.contact .question {
-	box-shadow: 0 0 20px #266188d3;
-	padding: 30px;
+.contact .question .form {
+	box-shadow: 0 0 10px #26618871;
+	padding: 20px;
 	padding-bottom: 10px;
 }
 
@@ -896,11 +916,17 @@ section .section-header h3::before, section .section-header h3::after {
 	background: #e82d2d;
 }  
 
+@media (max-width: 575px) {
+	.contact .section-header {
+		padding-bottom: 25px;
+	}
+}
+
 /*-------------------------------------------------------------
 =========================  Footer  ===========================
 ---------------------------------------------------------------*/
 #footer {
-	background: #28928d;
+	background: #0b7a75;
 	padding: 10px;
 	font-size: 14px;
 	color: #ffffff;
