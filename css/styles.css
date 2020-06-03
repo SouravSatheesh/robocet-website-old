@@ -318,7 +318,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 #intro h2 {
-	color: #3c5e5f;
+	color: #12ebc7;
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+	font-weight: bold;
 	margin-bottom: 30px;
 	font-size: 25px;
 }
@@ -326,14 +328,14 @@ body::-webkit-scrollbar-thumb {
 #intro .btn-get-started {
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 20px;
 	letter-spacing: 0.5px;
 	display: inline-block;
 	padding: 10px 28px;
 	transition: 0.5s;
 	border: 3px solid rgba(10, 3, 3, 0.404);
 	color: #3c5e5f;
-	border-radius: 25px;
+	border-radius: 30px;
 	font-weight: bold;
   }
   
@@ -744,7 +746,7 @@ section .section-header h3::before, section .section-header h3::after {
 
 .contact .info-box {
 	text-align: center;
-	box-shadow: 0 0 30px #266188;
+	box-shadow: 0 0 20px #266188d3;
 	padding: 30px 0 30px 0;
 }
 
@@ -769,7 +771,7 @@ section .section-header h3::before, section .section-header h3::after {
 }
 
 .contact .question {
-	box-shadow: 0 0 30px #266188;
+	box-shadow: 0 0 20px #266188d3;
 	padding: 30px;
 	padding-bottom: 10px;
 }
