@@ -307,6 +307,8 @@ body::-webkit-scrollbar-thumb {
 	height: 100vh;
 	background: url('../images/RobAi.jpeg') center top;
 	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
 	text-align: center;
 }
 
