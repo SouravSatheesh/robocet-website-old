@@ -373,6 +373,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
 	padding: 40px;
+	background-color: #e7f3f3;
 }
 
 section .section-header h3 {
