@@ -162,7 +162,7 @@ var i;
 for(i = 0; i < 26; i++){
 	let html = document.getElementById("row").innerHTML;
 	html += 
-	'<div class="col-sm-4 col-md-3 col-6 team-member" data-aos="zoom-in" data-aos-duration="1500">'+
+	'<div class="col-sm-4 col-md-3 col-6 team-member">'+
 	'<div class="team-image">'+
 		'<img src="' + team[i]["img"] +'" alt="" height="100" width="100">'+
 	'</div>'+
