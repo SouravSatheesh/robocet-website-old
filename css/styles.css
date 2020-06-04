@@ -701,7 +701,8 @@ section .section-header h3::before, section .section-header h3::after {
 
 #announcement {
 	background: linear-gradient(rgba(3, 34, 25, 0.815), rgba(7, 13, 34, 0.849)), url("../images/announcement.jpg") fixed center center;
-	background-size: cover;
+	background-size: contain;
+	position: relative;
 }
 
 #announcement h3 {
