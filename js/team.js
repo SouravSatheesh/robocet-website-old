@@ -164,7 +164,7 @@ for(i = 0; i < 26; i++){
 	html += 
 	'<div class="col-sm-4 col-md-3 col-6 team-member">'+
 	'<div class="team-image">'+
-		'<img src="' + team[i]["img"] + '">'+
+		'<img data-src="' + team[i]["img"] + '">'+
 	'</div>'+
 	'<div class="team-info">'+
 	'<span class="team-position">' + team[i]["Position"] + '</span><br>'+
